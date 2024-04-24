@@ -1,0 +1,16 @@
+name: Target Workflow
+
+on:
+  workflow_dispatch:   
+    
+jobs:
+      
+  trigger_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo workflow name
+        run: |
+          echo "This is target workflow"
+          echo""
+          echo "This is triggered by my Source workflow...."
+          sleep 10
